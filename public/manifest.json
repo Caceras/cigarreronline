@@ -1,0 +1,35 @@
+{
+  "name": "CigarrerOnline",
+  "short_name": "CigarrerOnline",
+  "description": "Cigarrer online – kubanska och handrullade premiumcigarrer, cigariller och tillbehör.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfaf7",
+  "theme_color": "#fbfaf7",
+  "scope": "/",
+  "categories": [
+    "shopping",
+    "lifestyle"
+  ],
+  "lang": "sv",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
