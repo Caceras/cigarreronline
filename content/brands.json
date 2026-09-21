@@ -1,0 +1,252 @@
+[
+  {
+    "id": "cohiba",
+    "name": "Cohiba",
+    "country": "Kuba",
+    "since": "1966",
+    "intro": "Cohiba är Kubas mest kända cigarrmärke och det flest söker efter när de vill köpa kubanska cigarrer online.",
+    "body": [
+      "Märket skapades 1966 som Fidel Castros privata cigarr och rullades på fabriken El Laguito i Havanna. Först 1982 blev det tillgängligt för allmänheten. Namnet kommer från taínoindianernas ord för tobak.",
+      "Sortimentet delas in i serier: Línea Clásica med Robusto och Esplendidos, Línea 1492 med Siglo-formaten, Maduro 5 och toppserien Behike. Tobaken väljs från de bästa vegas i Vuelta Abajo, och Cohiba är det enda Habanos-märket vars blad genomgår en tredje fermentering.",
+      "Välj Siglo II eller Robusto om du provar Cohiba för första gången. Behike 52 är för den som vill uppleva märket när det är som mest exklusivt."
+    ]
+  },
+  {
+    "id": "montecristo",
+    "name": "Montecristo",
+    "country": "Kuba",
+    "since": "1935",
+    "intro": "Montecristo är en av världens mest sålda kubanska cigarrer, och No. 2 räknas som referensen för piramidformatet.",
+    "body": [
+      "Namnet kommer från Alexandre Dumas roman Greve av Monte Cristo, som lästes högt för rullarna på fabriken när märket skapades 1935.",
+      "Montecristo No. 4 är en av de mest sålda kubanska cigarrerna genom tiderna och ett prisvärt sätt att lära känna kubansk tobak. No. 2 är ett av de mest omtyckta formaten bland cigarrentusiaster. Profilen är medelfyllig, med ceder, kryddor och kakao."
+    ]
+  },
+  {
+    "id": "partagas",
+    "name": "Partagás",
+    "country": "Kuba",
+    "since": "1845",
+    "intro": "Partagás är ett av Havannas äldsta cigarrhus, känt för kraftfulla och jordiga cigarrer.",
+    "body": [
+      "Jaime Partagás grundade fabriken i Havanna 1845. Serie D No. 4 är i dag en av de mest sålda premiumcigarrerna i världen och ett riktmärke för robustoformatet.",
+      "Förvänta dig en fyllig profil med peppar, läder och mörk choklad. Partagás passar bäst den som redan rökt några cigarrer och vill ha mer smak."
+    ]
+  },
+  {
+    "id": "romeo-y-julieta",
+    "name": "Romeo y Julieta",
+    "country": "Kuba",
+    "since": "1875",
+    "intro": "Romeo y Julieta är det kubanska märke som gav namn åt churchillformatet.",
+    "body": [
+      "Winston Churchill var en trogen kund och churchillformatet på 178 × 47 heter sedan dess så. Märket grundades 1875 och profilen är oftast medelfyllig och följsam."
+    ]
+  },
+  {
+    "id": "bolivar",
+    "name": "Bolívar",
+    "country": "Kuba",
+    "since": "1902",
+    "intro": "Bolívar hör till de kraftfullaste märkena från Havanna.",
+    "body": [
+      "Märket är uppkallat efter frihetskämpen Simón Bolívar och är känt för jordiga, fylliga cigarrer. Passar den som söker starka kubanska cigarrer."
+    ]
+  },
+  {
+    "id": "punch",
+    "name": "Punch",
+    "country": "Kuba",
+    "since": "1840",
+    "intro": "Punch är ett av de äldsta cigarrmärkena från Kuba.",
+    "body": [
+      "Märket skapades 1840 med den brittiska marknaden i sikte och fick sitt namn efter figuren i den engelska satirtidningen Punch. Profilen är medelfyllig och fruktig."
+    ]
+  },
+  {
+    "id": "h-upmann",
+    "name": "H. Upmann",
+    "country": "Kuba",
+    "since": "1844",
+    "intro": "H. Upmann grundades av den tyske bankiren Hermann Upmann i Havanna.",
+    "body": [
+      "Märket står för en rund och lättillgänglig kubansk stil. Magnum 54 är ett modernt format med stort ringmått och mild profil."
+    ]
+  },
+  {
+    "id": "arturo-fuente",
+    "name": "Arturo Fuente",
+    "country": "Dominikanska republiken",
+    "since": "1912",
+    "intro": "Arturo Fuente är ett av Dominikanska republikens mest respekterade cigarrhus.",
+    "body": [
+      "Familjeföretaget startade i Tampa 1912 och tillverkar i dag i Santiago i Dominikanska republiken. Hemingway-serien är känd för sina perfecto-format.",
+      "Opus X från 1995 var den första cigarren med dominikanskt odlat täckblad, något många ansåg omöjligt. Den tillverkas fortfarande i små volymer."
+    ]
+  },
+  {
+    "id": "davidoff",
+    "name": "Davidoff",
+    "country": "Dominikanska republiken",
+    "intro": "Davidoff står för förfinade och ofta milda cigarrer från Dominikanska republiken.",
+    "body": [
+      "Märket bär namn efter den schweiziske tobakshandlaren Zino Davidoff. Sedan 1990 tillverkas cigarrerna i Dominikanska republiken.",
+      "Grand Cru-serien är mild och elegant. Winston Churchill-serien är fylligare och mörkare. Davidoff gör även cigariller."
+    ]
+  },
+  {
+    "id": "macanudo",
+    "name": "Macanudo",
+    "country": "Dominikanska republiken",
+    "since": "1868",
+    "intro": "Macanudo är ett av de största märkena för milda premiumcigarrer.",
+    "body": [
+      "Café-serien med Connecticut shade-täckblad är ljus, krämig och ett vanligt förstaval för nybörjare."
+    ]
+  },
+  {
+    "id": "la-aurora",
+    "name": "La Aurora",
+    "country": "Dominikanska republiken",
+    "since": "1903",
+    "intro": "La Aurora är det äldsta cigarrhuset i Dominikanska republiken.",
+    "body": [
+      "Grundat 1903 av Eduardo León Jimenes. 1495-serien är uppkallad efter året då tobak först planterades på ön och ger mycket cigarr för pengarna."
+    ]
+  },
+  {
+    "id": "ashton",
+    "name": "Ashton",
+    "country": "Dominikanska republiken",
+    "since": "1985",
+    "intro": "Ashton är ett märke från Philadelphia vars cigarrer rullas hos Fuente i Dominikanska republiken.",
+    "body": [
+      "Classic-serien är mild och elegant, med Connecticut shade-täckblad."
+    ]
+  },
+  {
+    "id": "padron",
+    "name": "Padrón",
+    "country": "Nicaragua",
+    "since": "1964",
+    "intro": "Padrón är ett av Nicaraguas mest hyllade cigarrhus.",
+    "body": [
+      "José Orlando Padrón startade i Miami 1964. Anniversary-serien från 1994 använder minst fyra år gammal tobak och är boxpressad."
+    ]
+  },
+  {
+    "id": "oliva",
+    "name": "Oliva",
+    "country": "Nicaragua",
+    "intro": "Oliva är en tobaksodlarfamilj med rötter på Kuba på 1800-talet och fabrik i Estelí.",
+    "body": [
+      "Serie V är kraftfull med ligero från Jalapa. Serie G är mild och prisvärd."
+    ]
+  },
+  {
+    "id": "perdomo",
+    "name": "Perdomo",
+    "country": "Nicaragua",
+    "intro": "Perdomo odlar, lagrar och rullar all tobak själva i Estelí, Nicaragua.",
+    "body": [
+      "Märket är känt för att lagra tobak i bourbonfat, vilket ger en mjuk och rund karaktär."
+    ]
+  },
+  {
+    "id": "drew-estate",
+    "name": "Drew Estate",
+    "country": "Nicaragua",
+    "since": "1996",
+    "intro": "Drew Estate grundades i New York 1996 och tillverkar i Estelí.",
+    "body": [
+      "Liga Privada No. 9 är en av de mest omtalade maduro-cigarrerna. Undercrown ger en liknande stil till ett lägre pris."
+    ]
+  },
+  {
+    "id": "rocky-patel",
+    "name": "Rocky Patel",
+    "country": "Honduras",
+    "since": "1995",
+    "intro": "Rocky Patel är ett av de mest spridda premiummärkena, med fabriker i Honduras och Nicaragua.",
+    "body": [
+      "Vintage 1990 är märkets kanske mest kända cigarr, med ett täckblad som lagrats i åratal. Decade skapades till tioårsjubileet."
+    ]
+  },
+  {
+    "id": "alec-bradley",
+    "name": "Alec Bradley",
+    "country": "Honduras",
+    "since": "1996",
+    "intro": "Alec Bradley är ett amerikanskt märke vars Prensado tillverkas i Honduras.",
+    "body": [
+      "Prensado är boxpressad och kryddig, med honduransk corojo som täckblad."
+    ]
+  },
+  {
+    "id": "signatur",
+    "name": "CigarrerOnline Signatur",
+    "country": "Nicaragua, Honduras, Dominikanska republiken",
+    "intro": "Vår egen serie handrullade cigarrer, blandade för att vara lätta att tycka om.",
+    "body": [
+      "Fyra format i olika styrka, från en mild petit corona till en fyllig toro. Rullade för hand med lång inlaga."
+    ]
+  },
+  {
+    "id": "toscano",
+    "name": "Toscano",
+    "country": "Italien",
+    "since": "1818",
+    "intro": "Toscano har tillverkat italienska cigarrer sedan 1818.",
+    "body": [
+      "Cigarrerna görs av eldhärdad Kentucky-tobak, vilket ger en rökig och torr karaktär."
+    ]
+  },
+  {
+    "id": "villiger",
+    "name": "Villiger",
+    "country": "Schweiz",
+    "since": "1888",
+    "intro": "Villiger är ett schweiziskt familjeföretag som gör cigariller och cigarrer.",
+    "body": [
+      "Premium No. 4 är en kort, lättrökt cigarill med sumatrablad."
+    ]
+  },
+  {
+    "id": "schimmelpenninck",
+    "name": "Schimmelpenninck",
+    "country": "Nederländerna",
+    "since": "1924",
+    "intro": "Schimmelpenninck är en av de mest kända holländska cigarillserierna.",
+    "body": [
+      "Mini Wilde har naturligt täckblad och en ren, lätt kryddig smak."
+    ]
+  },
+  {
+    "id": "handelsgold",
+    "name": "Handelsgold",
+    "country": "Tyskland",
+    "intro": "Handelsgold är tyska cigariller, kända för smaksatta varianter med trämunstycke.",
+    "body": [
+      "Vanilla Tip är den mest efterfrågade smaken."
+    ]
+  },
+  {
+    "id": "backwoods",
+    "name": "Backwoods",
+    "country": "USA",
+    "intro": "Backwoods är amerikanska cigariller med orullad, rustik ände.",
+    "body": [
+      "Sweet Aromatic är söt och aromatisk och säljs i påsar om fem."
+    ]
+  },
+  {
+    "id": "king-edward",
+    "name": "King Edward",
+    "country": "USA",
+    "since": "1918",
+    "intro": "King Edward är en amerikansk cigarr från Jacksonville, Florida.",
+    "body": [
+      "Imperial är mild och okomplicerad."
+    ]
+  }
+]

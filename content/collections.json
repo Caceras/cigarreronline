@@ -1,0 +1,392 @@
+[
+  {
+    "path": "/cigarrer/",
+    "name": "Cigarrer",
+    "h1": "Cigarrer",
+    "title": "Cigarrer – köp premiumcigarrer online | CigarrerOnline",
+    "description": "Premiumcigarrer från Kuba, Dominikanska republiken, Nicaragua och Honduras. Filtrera efter ursprung, styrka och pris. Fri frakt över 799 kr.",
+    "intro": "Alla handrullade premiumcigarrer vi säljer, från milda nybörjarcigarrer till fylliga Habanos. Filtrera på ursprung, styrka eller pris.",
+    "related": [
+      "/cigarrer/kubanska/",
+      "/cigarrer/dominikanska/",
+      "/cigarrer/nicaraguanska/",
+      "/cigarrer/honduranska/",
+      "/cigarrer/handrullade/",
+      "/cigarrer/milda/",
+      "/cigarrer/starka/",
+      "/cigarrer/prisvarda/",
+      "/cigarrer/exklusiva/",
+      "/cigarrer/cigariller/"
+    ],
+    "sections": [
+      {
+        "h2": "Vad kostar cigarrer?",
+        "p": [
+          "Priset på en premiumcigarr i Sverige ligger oftast mellan 100 och 350 kronor styck. Kubanska märken som Cohiba och Montecristo ligger i den övre halvan. Nicaraguanska och dominikanska cigarrer ger ofta mer för pengarna. Sällsynta serier som Cohiba Behike kostar över 1 000 kronor.",
+          "Priset styrs av tobakens ålder, hur mycket handarbete som krävs och den svenska tobaksskatten, som läggs på per styck. Köper du en hel låda om 20 eller 25 blir styckpriset lägre."
+        ]
+      },
+      {
+        "h2": "Så väljer du cigarr",
+        "p": [
+          "Börja med styrkan. Milda cigarrer med ljust täckblad passar dig som är ny, medan maduro och ligero-tunga blandningar ger mer kropp. Välj sedan format efter hur lång tid du har: en petit corona tar omkring 30 minuter, en churchill en och en halv timme.",
+          "Osäker? Läs vår guide om cigarrer för nybörjare eller skicka oss ett mejl."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "cigarr"
+    }
+  },
+  {
+    "path": "/cigarrer/kubanska/",
+    "parent": "/cigarrer/",
+    "name": "Kubanska cigarrer",
+    "h1": "Kubanska cigarrer",
+    "title": "Kubanska cigarrer online – Cohiba, Montecristo, Partagás | CigarrerOnline",
+    "description": "Köp kubanska cigarrer online: Cohiba, Montecristo, Partagás, Romeo y Julieta och Bolívar. Originalcigarrer från Habanos, lagrade i 69 % luftfuktighet.",
+    "intro": "Habanos från Kuba: Cohiba, Montecristo, Partagás, Romeo y Julieta, Bolívar, Punch och H. Upmann. Originalcigarrer med Habanos garantisigill.",
+    "related": [
+      "/marken/cohiba/",
+      "/marken/montecristo/",
+      "/marken/partagas/",
+      "/guide/ar-kubanska-cigarrer-olagliga/"
+    ],
+    "sections": [
+      {
+        "h2": "Vad gör kubanska cigarrer speciella?",
+        "p": [
+          "Kubansk tobak odlas främst i Vuelta Abajo i provinsen Pinar del Río, där jord och klimat ger en profil som är svår att kopiera. Alla kubanska premiumcigarrer är handrullade med lång inlaga (hela tobaksblad) och säljs under det statliga varumärket Habanos.",
+          "Smaken beskrivs ofta som jordig och kryddig, med toner av ceder, läder, kakao och kaffe. Kubanska cigarrer är ofta mer varierande mellan lådor än nicaraguanska och dominikanska, vilket många ser som en del av charmen."
+        ]
+      },
+      {
+        "h2": "Kubanska cigarrer, pris",
+        "p": [
+          "En kubansk cigarr kostar i Sverige oftast mellan 150 och 350 kronor styck. Montecristo No. 4 är en prisvärd väg in. Cohiba Robusto och Siglo-serien ligger högre, och Behike är den dyraste. Köper du en hel låda om 25 sjunker styckpriset."
+        ]
+      },
+      {
+        "h2": "Är kubanska cigarrer lagliga i Sverige?",
+        "p": [
+          "Ja. Det amerikanska handelsembargot gäller bara USA. I Sverige och resten av EU är det lagligt att köpa, sälja och röka kubanska cigarrer. Läs mer i vår guide om varför kubanska cigarrer är olagliga i USA."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "Vilken är den bästa kubanska cigarren för nybörjare?",
+        "a": "Montecristo No. 4 eller Cohiba Siglo II. Båda är medelfylliga, balanserade och relativt korta."
+      },
+      {
+        "q": "Hur vet jag att en kubansk cigarr är äkta?",
+        "a": "Äkta Habanos har den kubanska statens gröna garantisigill och en Habanos-hologramdekal med en kod som kan verifieras på habanos.com."
+      }
+    ],
+    "filter": {
+      "type": "cigarr",
+      "country": "Kuba"
+    }
+  },
+  {
+    "path": "/cigarrer/dominikanska/",
+    "parent": "/cigarrer/",
+    "name": "Dominikanska cigarrer",
+    "h1": "Dominikanska cigarrer",
+    "title": "Dominikanska cigarrer – Arturo Fuente, Davidoff & fler | CigarrerOnline",
+    "description": "Dominikanska cigarrer från Arturo Fuente, Davidoff, Macanudo, La Aurora och Ashton. Ofta milda och krämiga, perfekta för nybörjare.",
+    "intro": "Dominikanska republiken är världens största exportör av premiumcigarrer. Stilen är ofta mild till medelfyllig, krämig och elegant.",
+    "related": [
+      "/marken/arturo-fuente/",
+      "/marken/davidoff/",
+      "/cigarrer/milda/",
+      "/guide/cigarrer-for-nyborjare/"
+    ],
+    "sections": [
+      {
+        "h2": "Därför är dominikanska cigarrer så populära",
+        "p": [
+          "Många kubanska tobaksfamiljer flyttade till Dominikanska republiken efter revolutionen 1959, och i dag kommer en stor del av världens premiumcigarrer från Cibaodalen runt Santiago. Tobaken ger ofta en rund, krämig och lättillgänglig profil.",
+          "Bästa dominikanska cigarrer för dig som är ny: Arturo Fuente Hemingway Best Seller, Macanudo Café och Davidoff Grand Cru. Vill du ha mer kraft, prova Opus X eller Davidoff Winston Churchill The Late Hour."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "cigarr",
+      "country": "Dominikanska republiken"
+    }
+  },
+  {
+    "path": "/cigarrer/nicaraguanska/",
+    "parent": "/cigarrer/",
+    "name": "Nicaraguanska cigarrer",
+    "h1": "Nicaraguanska cigarrer",
+    "title": "Nicaraguanska cigarrer – Padrón, Oliva, Perdomo | CigarrerOnline",
+    "description": "Cigarrer från Nicaragua: Padrón, Oliva, Perdomo och Drew Estate. Kryddiga, fylliga och ofta mycket prisvärda.",
+    "intro": "Vulkanisk jord i Estelí, Jalapa och Condega ger kryddig och fyllig tobak. Nicaragua är i dag många cigarrentusiasters favoritland.",
+    "related": [
+      "/marken/padron/",
+      "/marken/oliva/",
+      "/marken/perdomo/",
+      "/marken/drew-estate/"
+    ],
+    "sections": [
+      {
+        "h2": "Om cigarrer från Nicaragua",
+        "p": [
+          "Nicaraguansk tobak är känd för peppar, kaffe och mörk sötma. Många av världens högst rankade cigarrer de senaste åren kommer härifrån, och prisnivån är ofta lägre än för motsvarande kubanska cigarrer."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "cigarr",
+      "country": "Nicaragua"
+    }
+  },
+  {
+    "path": "/cigarrer/honduranska/",
+    "parent": "/cigarrer/",
+    "name": "Honduranska cigarrer",
+    "h1": "Honduranska cigarrer",
+    "title": "Honduranska cigarrer – Rocky Patel, Alec Bradley | CigarrerOnline",
+    "description": "Cigarrer från Honduras: Rocky Patel, Alec Bradley och vår signatur-toro. Fylliga och jordiga.",
+    "intro": "Honduras har en lång tradition av cigarrtillverkning runt Danlí och Jamastrán. Tobaken är ofta fyllig, jordig och lite söt.",
+    "related": [
+      "/marken/rocky-patel/",
+      "/marken/alec-bradley/"
+    ],
+    "filter": {
+      "type": "cigarr",
+      "country": "Honduras"
+    }
+  },
+  {
+    "path": "/cigarrer/handrullade/",
+    "parent": "/cigarrer/",
+    "name": "Handrullade cigarrer",
+    "h1": "Handrullade cigarrer",
+    "title": "Handrullade cigarrer – lång inlaga, rullade för hand | CigarrerOnline",
+    "description": "Handrullade cigarrer med lång inlaga, inklusive vår egen signaturserie i fyra format. Skillnaden mot maskinrullade cigarrer förklarad.",
+    "intro": "Alla premiumcigarrer vi säljer är handrullade med hela tobaksblad. Här hittar du också vår egen signaturserie, rullad efter våra blandningar.",
+    "related": [
+      "/guide/hur-tillverkas-cigarrer/",
+      "/cigarrer/"
+    ],
+    "sections": [
+      {
+        "h2": "Handrullade eller maskinrullade cigarrer?",
+        "p": [
+          "En handrullad cigarr har lång inlaga: hela tobaksblad som veckas ihop av en torcedor, läggs i ett omblad och rullas i ett täckblad. Det ger jämn förbränning och en smak som utvecklas under rökningen.",
+          "Maskinrullade cigarrer och de flesta cigariller har kort inlaga (finskuren tobak) och ofta ett omblad av homogeniserad tobak. De är billigare och mer enhetliga, men enklare i smaken. Båda har sin plats. Kort inlaga passar en kort paus, lång inlaga när du har tid."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "cigarr",
+      "signature": true
+    }
+  },
+  {
+    "path": "/cigarrer/milda/",
+    "parent": "/cigarrer/",
+    "name": "Milda cigarrer",
+    "h1": "Milda cigarrer",
+    "title": "Milda cigarrer – bra cigarrer för nybörjare | CigarrerOnline",
+    "description": "Milda cigarrer med Connecticut- och Cameroon-täckblad. Krämiga och lättrökta, ett bra första val. Från Davidoff, Macanudo, Arturo Fuente m.fl.",
+    "intro": "Krämiga och lättrökta cigarrer, ofta med ljust Connecticut-täckblad. Ett bra första val och ett bra dagsval.",
+    "related": [
+      "/guide/cigarrer-for-nyborjare/",
+      "/cigarrer/dominikanska/"
+    ],
+    "sections": [
+      {
+        "h2": "Vad gör en cigarr mild?",
+        "p": [
+          "Styrkan kommer främst från inlagan. Blad högt upp på plantan (ligero) ger mer nikotin och kropp, blad längre ner (volado, seco) ger mildare rök. Ett ljust täckblad som Connecticut shade bidrar till en mjuk och krämig smak. Ett mörkt täckblad betyder inte automatiskt en stark cigarr, men ger ofta mer sötma och fyllighet."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "cigarr",
+      "strengthMax": 2
+    }
+  },
+  {
+    "path": "/cigarrer/starka/",
+    "parent": "/cigarrer/",
+    "name": "Starka cigarrer",
+    "h1": "Starka cigarrer",
+    "title": "Starka cigarrer – fylliga Habanos och Nicaragua | CigarrerOnline",
+    "description": "Fylliga och starka cigarrer för den erfarne: Partagás, Bolívar, Oliva Serie V, Liga Privada och fler.",
+    "intro": "Fylliga cigarrer med mycket ligero och kraftig rök. Passar bäst efter en rejäl måltid och för den som rökt ett tag.",
+    "filter": {
+      "type": "cigarr",
+      "strengthMin": 4
+    }
+  },
+  {
+    "path": "/cigarrer/prisvarda/",
+    "parent": "/cigarrer/",
+    "name": "Prisvärda cigarrer",
+    "h1": "Prisvärda cigarrer under 200 kr",
+    "title": "Billiga cigarrer online – prisvärda premiumcigarrer | CigarrerOnline",
+    "description": "Prisvärda premiumcigarrer under 200 kr styck. Handrullade cigarrer från Nicaragua, Dominikanska republiken och Kuba som ger mycket för pengarna.",
+    "intro": "Handrullade premiumcigarrer under 200 kronor styck. Vill du ha billiga cigarrer utan att tumma på kvaliteten, börja här.",
+    "related": [
+      "/cigarrpaket/",
+      "/cigarrer/nicaraguanska/"
+    ],
+    "sections": [
+      {
+        "h2": "Goda och prisvärda cigarrer",
+        "p": [
+          "Priset på en cigarr säger mindre om kvaliteten än många tror. Nicaraguanska och dominikanska tillverkare som Oliva, La Aurora och Perdomo gör handrullade cigarrer med lång inlaga till betydligt lägre priser än de kubanska märkena. Montecristo No. 4 är ett av få prisvärda alternativ från Kuba.",
+          "Det lägsta styckpriset får du när du köper en hel låda. Se våra lådor och paket."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "cigarr",
+      "priceMax": 199
+    }
+  },
+  {
+    "path": "/cigarrer/exklusiva/",
+    "parent": "/cigarrer/",
+    "name": "Exklusiva cigarrer",
+    "h1": "Exklusiva cigarrer",
+    "title": "Exklusiva cigarrer – Behike, Opus X, Padrón | CigarrerOnline",
+    "description": "Exklusiva och sällsynta cigarrer: Cohiba Behike 52, Arturo Fuente Opus X och Padrón 1964 Anniversary. Begränsade serier.",
+    "intro": "Sällsynta serier och lagrad tobak. Cigarrer för ett särskilt tillfälle eller en present.",
+    "filter": {
+      "type": "cigarr",
+      "priceMin": 300
+    }
+  },
+  {
+    "path": "/cigarrer/cigariller/",
+    "parent": "/cigarrer/",
+    "name": "Cigariller",
+    "h1": "Cigariller och små cigarrer",
+    "title": "Cigariller & små cigarrer – Davidoff, Villiger, Toscano | CigarrerOnline",
+    "description": "Cigariller och små cigarrer: Davidoff, Villiger, Schimmelpenninck, Toscanello, King Edward och smaksatta cigariller som Backwoods och Handelsgold.",
+    "intro": "Korta och smala cigarrer för en kortare stund, från milda Davidoff till rökiga italienska Toscano. Här hittar du även smaksatta cigariller.",
+    "sections": [
+      {
+        "h2": "Vad är skillnaden på cigarill och cigarr?",
+        "p": [
+          "En cigarill är en liten cigarr, oftast maskintillverkad med kort inlaga och ett ringmått under 30. Den räcker 10 till 20 minuter. Smaksatta cigariller, till exempel med vanilj, har arom tillsatt i tobaken eller munstycket."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "cigarill"
+    }
+  },
+  {
+    "path": "/cigarrpaket/",
+    "name": "Cigarrpaket",
+    "h1": "Cigarrpaket, lådor och presentaskar",
+    "title": "Cigarrpaket & lådor – 20- och 25-pack, presentask | CigarrerOnline",
+    "description": "Cigarrpaket, presentaskar och hela lådor om 20 och 25 cigarrer. Startset med humidor och nybörjarpaket med snoppare.",
+    "intro": "Hela lådor om 20 och 25, provpaket, presentaskar och startset med humidor. Det lägsta styckpriset får du i en hel låda.",
+    "sections": [
+      {
+        "h2": "Köpa en hel låda cigarrer",
+        "p": [
+          "En originallåda i ceder skyddar cigarrerna och gör det lätt att lagra dem i humidorn. Många cigarrer blir också bättre med ett eller två års lagring. En låda om 25 ger dessutom ett lägre pris per cigarr."
+        ]
+      }
+    ],
+    "filter": {
+      "type": "paket"
+    }
+  },
+  {
+    "path": "/tillbehor/",
+    "name": "Tillbehör",
+    "h1": "Cigarrtillbehör",
+    "title": "Cigarrtillbehör – humidorer, snoppare, tändare, askfat | CigarrerOnline",
+    "description": "Tillbehör för cigarrer: humidorer, cigarrsnoppare, jettändare, askfat, fodral och Boveda fuktpåsar.",
+    "intro": "Det du behöver för att förvara, snoppa och tända dina cigarrer rätt.",
+    "related": [
+      "/tillbehor/humidorer/",
+      "/tillbehor/cigarrsnoppare/",
+      "/tillbehor/tandare/",
+      "/tillbehor/askfat/",
+      "/tillbehor/fodral-och-fukt/"
+    ],
+    "filter": {
+      "type": "tillbehor"
+    }
+  },
+  {
+    "path": "/tillbehor/humidorer/",
+    "parent": "/tillbehor/",
+    "name": "Humidorer",
+    "h1": "Humidorer",
+    "title": "Humidor – förvaring av cigarrer | CigarrerOnline",
+    "description": "Humidorer i spansk ceder och resehumidorer. Håller cigarrerna i rätt luftfuktighet, 65–72 %.",
+    "intro": "En humidor håller cigarrerna vid 65–72 % luftfuktighet så att de inte torkar ut eller möglar.",
+    "related": [
+      "/guide/forvara-cigarrer/"
+    ],
+    "filter": {
+      "sub": "humidorer"
+    }
+  },
+  {
+    "path": "/tillbehor/cigarrsnoppare/",
+    "parent": "/tillbehor/",
+    "name": "Cigarrsnoppare",
+    "h1": "Cigarrsnoppare",
+    "title": "Cigarrsnoppare & giljotiner | CigarrerOnline",
+    "description": "Cigarrsnoppare och giljotiner för ett rent snitt. Enkel och dubbel giljotin.",
+    "intro": "Ett rent snitt ger bra drag och förhindrar att täckbladet spricker.",
+    "related": [
+      "/guide/snoppa-och-tanda-en-cigarr/"
+    ],
+    "filter": {
+      "sub": "cigarrsnoppare"
+    }
+  },
+  {
+    "path": "/tillbehor/tandare/",
+    "parent": "/tillbehor/",
+    "name": "Tändare",
+    "h1": "Cigarrtändare",
+    "title": "Cigarrtändare – jetflamma | CigarrerOnline",
+    "description": "Tändare med jetflamma för cigarrer. Vindtåliga och lukt- och smakfria.",
+    "intro": "En butanlåga smakar inte, till skillnad från bensintändare och svavelstickor.",
+    "filter": {
+      "sub": "tandare"
+    }
+  },
+  {
+    "path": "/tillbehor/askfat/",
+    "parent": "/tillbehor/",
+    "name": "Askfat",
+    "h1": "Askfat för cigarrer",
+    "title": "Askfat för cigarrer – glas och läder | CigarrerOnline",
+    "description": "Askfat med breda hållare anpassade för cigarrer, i kristallglas och läder.",
+    "intro": "Cigarrer behöver bredare hållare än cigaretter. Här finns askfat för två och fyra cigarrer.",
+    "filter": {
+      "sub": "askfat"
+    }
+  },
+  {
+    "path": "/tillbehor/fodral-och-fukt/",
+    "parent": "/tillbehor/",
+    "name": "Fodral & fukt",
+    "h1": "Cigarrfodral och fuktgivare",
+    "title": "Cigarrfodral & Boveda fuktpåsar | CigarrerOnline",
+    "description": "Cigarrfodral i läder och Boveda tvåvägs fuktpåsar för rätt luftfuktighet.",
+    "intro": "Skydda cigarrerna på resan och håll rätt luftfuktighet hemma.",
+    "related": [
+      "/guide/forvara-cigarrer/"
+    ],
+    "filter": {
+      "sub": "fodral-och-fukt"
+    }
+  }
+]
