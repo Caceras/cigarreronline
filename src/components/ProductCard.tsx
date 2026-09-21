@@ -18,7 +18,7 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
       </div>
       <div className="pt-4">
-        <p className="eyebrow !text-[0.62rem] text-muted mb-1.5 truncate">{productMeta(product) || ' '}</p>
+        <p className="eyebrow !text-[0.62rem] text-muted mb-1.5 truncate">{productMeta(product) || ' '}</p>
         <h3 className="font-display text-[1.25rem] sm:text-[1.3rem] leading-snug text-ink group-hover:text-brass-dark transition-colors text-balance line-clamp-2 min-h-[2.6em]">
           {product.name}
         </h3>
