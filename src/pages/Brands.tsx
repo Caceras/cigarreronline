@@ -65,7 +65,10 @@ export function BrandPage() {
           faqLd(facts.faq),
         ]} />
       <PageHeader crumbs={crumbs} eyebrow={[b.country, b.since && `sedan ${b.since}`].filter(Boolean).join(' · ')} title={`${b.name} ${plural}`} intro={b.intro} />
-      <section className="container-x"><ProductGrid items={items} cols={items.length >= 4 ? 4 : 3} /></section>
+      <section className="container-x">
+        <h2 className="sr-only">{b.name} i sortimentet</h2>
+        <ProductGrid items={items} cols={items.length >= 4 ? 4 : 3} eager />
+      </section>
       <section className="container-x mt-24 grid lg:grid-cols-12 gap-10 border-t border-line pt-14">
         <h2 className="lg:col-span-4 text-3xl sm:text-4xl">Om {b.name}</h2>
         <div className="lg:col-span-7 prose-co">

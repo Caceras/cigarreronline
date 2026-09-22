@@ -109,3 +109,22 @@ Three services, then, all from this one repo:
 | site | `Dockerfile` | cigarreronline.se |
 | cms | `cms/Dockerfile` | cms.host4ai.se |
 | forum | `forum/Dockerfile` | cigarreronline.se path `/forum` |
+
+## Shipping changes from a Claude chat
+
+Claude edits the repo through the GitHub connector. Small code changes go in as a diff:
+`patches/<name>.patch` → the **Apply patch** workflow applies it, typechecks, builds, and commits
+the result (or fails loudly and changes nothing). Then deploy from Dokploy.
+
+## SEO, built in
+
+| What | Where |
+| --- | --- |
+| Every page prerendered to static HTML (what Google sees = what users see) | `scripts/prerender.mjs` |
+| Titles kept ≤ 60 chars, descriptions cut at word boundaries | `fitTitle`, `clip` in `src/lib/seo.tsx` |
+| JSON-LD: WebSite, OnlineStore, BreadcrumbList, ItemList, Product + Offer (shipping, returns), Brand, Article, FAQPage | pages + `src/lib/seo.tsx` |
+| One SVG image per product at `/img/produkt/<id>.svg`, listed in the image sitemap | `productImages()` in `src/entry-server.tsx` |
+| `sitemap.xml` with real dates only (guides), `robots.txt` | `scripts/prerender.mjs` |
+| Brand pages get facts and FAQ generated from the catalogue, so they never go stale | `brandFacts()` in `src/pages/Brands.tsx` |
+| Caching per file type, security headers on every response, real 404s, one URL per page | `deploy/nginx.conf` |
+| Content is validated at build time; the validator is not shipped to browsers | `content/schema.ts`, `content/model.ts` |

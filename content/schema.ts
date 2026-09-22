@@ -4,15 +4,8 @@
  * reaching the site. Keep this file and the CMS server's copy of the schema in sync.
  */
 import { z } from 'zod';
-
-export const STRENGTHS = ['Mild', 'Mild–medel', 'Medel', 'Medelstark', 'Stark'] as const;
-export const STRENGTH_LEVEL: Record<(typeof STRENGTHS)[number], number> = {
-  Mild: 1, 'Mild–medel': 2, Medel: 3, Medelstark: 4, Stark: 5,
-};
-export const KINDS = ['cigar', 'cutter', 'lighter', 'humidor', 'ashtray', 'box', 'case', 'humidifier'] as const;
-export const VITOLAS = ['robusto', 'toro', 'churchill', 'petit', 'piramide', 'perfecto', 'cigarillo'] as const;
-export const TYPES = ['cigarr', 'cigarill', 'paket', 'tillbehor'] as const;
-export const SUBS = ['humidorer', 'cigarrsnoppare', 'tandare', 'askfat', 'fodral-och-fukt'] as const;
+import { STRENGTHS, KINDS, VITOLAS, TYPES, SUBS } from './model';
+export * from './model';
 
 const slug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, 'slug: lowercase letters, digits and hyphens');
 const hex = z.string().regex(/^#[0-9a-f]{6}$/i, 'colour: #rrggbb');
@@ -154,21 +147,4 @@ export function validateContent(raw: {
 
   if (errors.length) throw new Error(`Content errors:\n- ${errors.join('\n- ')}`);
   return { products, brands, guides, collections };
-}
-
-/** Turns a collection's filter spec into a predicate. */
-export function matches(p: Product, f: Filter): boolean {
-  const lvl = p.strength ? STRENGTH_LEVEL[p.strength] : 0;
-  return (
-    (f.type === undefined || p.type === f.type) &&
-    (f.sub === undefined || p.sub === f.sub) &&
-    (f.country === undefined || p.country === f.country) &&
-    (f.brand === undefined || p.brand === f.brand) &&
-    (f.signature === undefined || !!p.signature === f.signature) &&
-    (f.flavoured === undefined || !!p.flavoured === f.flavoured) &&
-    (f.strengthMin === undefined || lvl >= f.strengthMin) &&
-    (f.strengthMax === undefined || (lvl > 0 && lvl <= f.strengthMax)) &&
-    (f.priceMin === undefined || p.price >= f.priceMin) &&
-    (f.priceMax === undefined || p.price <= f.priceMax)
-  );
 }

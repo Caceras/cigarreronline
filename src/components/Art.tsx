@@ -304,23 +304,29 @@ export const productAlt = (p: Product) =>
   p.type === 'cigarr' ? `${p.name}, ${p.format?.toLowerCase() ?? 'cigarr'}${p.country ? ' från ' + p.country : ''}` : p.name;
 
 /**
- * Product picture as a real image file, so it can be indexed by image search and referenced
- * from structured data. `priority` is for the main image on a product page (the LCP element).
+ * Product picture. Normally a real image file (indexable, cached, lazy below the fold).
+ * `eager` loads it at once (first row of a grid). `inline` puts the SVG straight into the
+ * HTML for the main image on a product page, so the largest paint needs no extra request.
  */
-export function ProductArt({ product, className = '', priority = false }: { product: Product; className?: string; priority?: boolean }) {
+export function ProductArt({ product, className = '', eager = false, inline = false }: { product: Product; className?: string; eager?: boolean; inline?: boolean }) {
   return (
     <div className={`relative overflow-hidden bg-paper-2 ${className}`}>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,rgba(255,255,255,.55),transparent_65%)]" />
+      {inline ? (
+        <div role="img" aria-label={productAlt(product)} className="absolute inset-0 flex items-center justify-center px-[6%]">
+          <ProductSvg product={product} />
+        </div>
+      ) : (
       <img
         src={productImage(product)}
         alt={productAlt(product)}
         width={1200}
         height={900}
-        loading={priority ? 'eager' : 'lazy'}
+        loading={eager ? 'eager' : 'lazy'}
         decoding="async"
-        {...(priority ? { fetchpriority: 'high' } : {})}
         className="absolute inset-0 w-full h-full object-cover"
       />
+      )}
     </div>
   );
 }

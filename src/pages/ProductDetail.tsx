@@ -117,7 +117,7 @@ export default function ProductDetail() {
 
       <section className="container-x pt-8 sm:pt-12 grid lg:grid-cols-12 gap-10 lg:gap-16">
         <div className="lg:col-span-7">
-          <ProductArt product={p} priority className="aspect-[4/3] lg:aspect-[5/4]" />
+          <ProductArt product={p} inline className="aspect-[4/3] lg:aspect-[5/4]" />
         </div>
         <div className="lg:col-span-5 lg:pt-6">
           {brand && <Link to={`/marken/${brand.id}/`} className="eyebrow text-brass-dark hover:text-ink">{brand.name}</Link>}

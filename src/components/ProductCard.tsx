@@ -8,11 +8,11 @@ export function productMeta(p: Product) {
   return [p.country, p.format ?? p.pack].filter(Boolean).join(' · ');
 }
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product, eager = false }: { product: Product; eager?: boolean }) {
   return (
     <Link to={`/produkt/${product.id}/`} className="group block">
       <div className="relative">
-        <ProductArt product={product} className="aspect-[4/3] transition-colors duration-500 group-hover:bg-paper-3" />
+        <ProductArt product={product} eager={eager} className="aspect-[4/3] transition-colors duration-500 group-hover:bg-paper-3" />
         {product.signature && (
           <span className="absolute top-3 left-3 eyebrow !text-[0.6rem] bg-paper text-ink px-2.5 py-1">Signatur</span>
         )}
@@ -28,10 +28,11 @@ export default function ProductCard({ product }: { product: Product }) {
   );
 }
 
-export function ProductGrid({ items, cols = 3 }: { items: Product[]; cols?: 3 | 4 }) {
+/** `eager`: the grid is near the top of the page, so its first row loads at once instead of lazily. */
+export function ProductGrid({ items, cols = 3, eager = false }: { items: Product[]; cols?: 3 | 4; eager?: boolean }) {
   return (
     <div className={`grid grid-cols-2 ${cols === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-x-4 sm:gap-x-6 gap-y-10 sm:gap-y-14`}>
-      {items.map((p) => <ProductCard key={p.id} product={p} />)}
+      {items.map((p, i) => <ProductCard key={p.id} product={p} eager={eager && i < cols} />)}
     </div>
   );
 }

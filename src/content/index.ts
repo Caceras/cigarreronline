@@ -1,16 +1,20 @@
-/** Loads and validates the JSON content, and exposes it to the site. */
+/**
+ * Exposes the JSON content to the site. Validation (content/schema.ts, zod) runs at build time
+ * in scripts/prerender.mjs, so the browser gets the data without the validator.
+ */
 import productsJson from '../../content/products.json';
 import brandsJson from '../../content/brands.json';
 import guidesJson from '../../content/guides.json';
 import collectionsJson from '../../content/collections.json';
-import { validateContent, matches, type Product, type Collection } from '../../content/schema';
+import { matches } from '../../content/model';
+import type { Product, Brand, Guide, Collection } from '../../content/schema';
 
-const content = validateContent({
-  products: productsJson, brands: brandsJson, guides: guidesJson, collections: collectionsJson,
-});
-
-export const { products, brands, guides, collections } = content;
-export * from '../../content/schema';
+export const products = productsJson as unknown as Product[];
+export const brands = brandsJson as unknown as Brand[];
+export const guides = guidesJson as unknown as Guide[];
+export const collections = collectionsJson as unknown as Collection[];
+export * from '../../content/model';
+export type * from '../../content/schema';
 
 export const getProduct = (id?: string) => products.find((p) => p.id === id);
 export const getBrand = (id?: string) => brands.find((b) => b.id === id);

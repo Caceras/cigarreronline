@@ -6,7 +6,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
-const { render, allPaths, productImages, lastmod, SITE } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href);
+const { render, allPaths, productImages, lastmod, SITE, validate } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href);
+validate();
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 
 const write = (url, file) => {

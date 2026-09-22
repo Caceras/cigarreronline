@@ -5,7 +5,7 @@ COPY cms/package.json ./cms/
 WORKDIR /app/cms
 RUN npm install --omit=dev
 WORKDIR /app
-COPY content/schema.ts ./content/schema.ts
+COPY content/schema.ts content/model.ts ./content/
 COPY cms/ ./cms/
 WORKDIR /app/cms
 ENV PORT=8080 STAGING_FILE=/data/staging.json

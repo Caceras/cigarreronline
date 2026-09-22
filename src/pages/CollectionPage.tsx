@@ -68,11 +68,13 @@ export default function CollectionPage({ path }: { path: string }) {
       </PageHeader>
 
       <section className="container-x">
+        <h2 className="sr-only">Produkter i {c.name.toLowerCase()}</h2>
         <div className="flex items-center justify-between border-y border-line py-3.5 mb-10 text-sm">
           <span className="text-muted"><span className="text-ink tabular-nums">{items.length}</span> produkter</span>
           <label className="flex items-center gap-2 text-muted">
             <span className="hidden sm:inline">Sortera</span>
             <select
+              aria-label="Sortera produkter"
               value={sort}
               onChange={(e) => setSort(e.target.value as Sort)}
               className="bg-transparent text-ink pr-1 focus:outline-none cursor-pointer"
@@ -84,7 +86,7 @@ export default function CollectionPage({ path }: { path: string }) {
             </select>
           </label>
         </div>
-        <ProductGrid items={items} cols={items.length >= 4 ? 4 : 3} />
+        <ProductGrid items={items} cols={items.length >= 4 ? 4 : 3} eager />
       </section>
 
       {(c.sections || related.length > 0 || c.faq) && (

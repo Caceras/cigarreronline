@@ -5,8 +5,14 @@ import { HeadContext, headTags, SITE, type HeadData } from './lib/seo';
 import { ProductSvg, productImage, productAlt } from './components/Art';
 import { products } from './data/products';
 import { guides } from './data/guides';
+import { validateContent } from '../content/schema';
+import { brands } from './data/brands';
+import { collections } from './data/collections';
 
 export { allPaths, SITE };
+
+/** Throws with a readable list if any content file is invalid, so a bad edit fails the build. */
+export const validate = () => validateContent({ products, brands, guides, collections });
 
 export function render(url: string) {
   const collector: { data?: HeadData } = {};
