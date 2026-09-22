@@ -7,16 +7,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
 const { render, allPaths, productImages, lastmod, SITE } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href);
-let template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
-
-// Preload the two fonts the first screen needs, so text renders in the right face at once.
-const css = fs.readdirSync(path.join(dist, 'assets')).filter((f) => f.endsWith('.css')).map((f) => fs.readFileSync(path.join(dist, 'assets', f), 'utf8')).join('');
-const preload = ['cormorant-garamond-latin-500-normal', 'inter-latin-400-normal']
-  .map((name) => css.match(new RegExp(`/assets/${name}-[\\w-]+\\.woff2`))?.[0])
-  .filter(Boolean)
-  .map((href) => `<link rel="preload" href="${href}" as="font" type="font/woff2" crossorigin>`)
-  .join('\n    ');
-template = template.replace('<!--head-->', `${preload}\n    <!--head-->`);
+const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 
 const write = (url, file) => {
   const { html, head } = render(url);
