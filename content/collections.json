@@ -158,7 +158,17 @@
     "filter": {
       "type": "cigarr",
       "country": "Honduras"
-    }
+    },
+    "sections": [
+      {
+        "h2": "Om cigarrer från Honduras",
+        "p": [
+          "Tobaksodlingen i Honduras är koncentrerad till Jamastrándalen och trakterna runt Danlí, nära gränsen mot Nicaragua. Jorden är bördig och klimatet varmt och fuktigt, vilket ger tobak med kropp, jordighet och en naturlig sötma.",
+          "Honduras har en stor andel corojo- och habanotobak, frön med kubanskt ursprung som togs dit efter revolutionen 1959. Många honduranska cigarrer är därför fylliga, men det finns också milda blandningar med ecuadorianskt Connecticut-täckblad.",
+          "Rocky Patel och Alec Bradley rullar stora delar av sina sortiment i Danlí. Vår egen signatur-toro är blandad av honduransk corojo."
+        ]
+      }
+    ]
   },
   {
     "path": "/cigarrer/handrullade/",
@@ -261,7 +271,16 @@
     "filter": {
       "type": "cigarr",
       "priceMin": 300
-    }
+    },
+    "sections": [
+      {
+        "h2": "Vad gör en cigarr exklusiv?",
+        "p": [
+          "Priset på de dyraste cigarrerna styrs av tillgång mer än av storlek. Cohiba Behike använder medio tiempo, två små blad högst upp på plantan som inte växer på alla plantor. Arturo Fuente Opus X var länge den enda cigarren med dominikanskt odlat täckblad och tillverkas i små volymer. Padrón 1964 Anniversary använder tobak som lagrats i minst fyra år.",
+          "En exklusiv cigarr gör sig bäst när du har gott om tid, efter en måltid och utan stress. Förvara den i humidor vid omkring 69 % luftfuktighet fram till dess."
+        ]
+      }
+    ]
   },
   {
     "path": "/cigarrer/cigariller/",
@@ -318,7 +337,16 @@
     ],
     "filter": {
       "type": "tillbehor"
-    }
+    },
+    "sections": [
+      {
+        "h2": "Vilka tillbehör behöver du?",
+        "p": [
+          "Tre saker räcker för att komma igång: en vass cigarrsnoppare, en tändare med jetflamma och ett sätt att hålla cigarrerna fuktiga. Har du bara några få cigarrer hemma räcker en tät låda med en tvåvägs fuktpåse. Köper du lådor eller samlar på dig fler cigarrer är en humidor i spansk ceder värd investeringen.",
+          "Ett askfat med breda hållare och ett fodral för att ta med cigarrer hemifrån är bra att ha, men inte nödvändigt från början."
+        ]
+      }
+    ]
   },
   {
     "path": "/tillbehor/humidorer/",
@@ -333,7 +361,17 @@
     ],
     "filter": {
       "sub": "humidorer"
-    }
+    },
+    "sections": [
+      {
+        "h2": "Så väljer du humidor",
+        "p": [
+          "Välj en humidor som rymmer fler cigarrer än du har i dag. En halvfull humidor håller jämnare luftfuktighet än en som är tom eller packad till bristningsgränsen, och de flesta samlingar växer.",
+          "Spansk ceder är standard för insidan. Träet buffrar fukt, står emot mögel och tobaksbagge och ger cigarrerna en lätt cederton. Locket ska sluta tätt, och en hygrometer visar om fuktnivån ligger rätt, omkring 65–72 %.",
+          "En ny humidor behöver fuktas upp i en till två veckor innan du lägger i cigarrer. Läs mer i vår guide om att förvara cigarrer."
+        ]
+      }
+    ]
   },
   {
     "path": "/tillbehor/cigarrsnoppare/",
@@ -348,7 +386,17 @@
     ],
     "filter": {
       "sub": "cigarrsnoppare"
-    }
+    },
+    "sections": [
+      {
+        "h2": "Giljotin, V-snitt eller hål?",
+        "p": [
+          "En giljotin skär av huvudänden rakt och är det vanligaste och mest mångsidiga valet. Dubbla blad ger ett renare snitt än ett, eftersom cigarren kläms från två håll och inte trycks ihop.",
+          "Ett V-snitt ger ett kilformat hål som koncentrerar röken, och en hålsnoppare borrar ett runt hål i locket. Båda fungerar bäst på cigarrer med rundad huvudände.",
+          "Vilken du än väljer ska bladen vara vassa. Ett slött snitt river täckbladet och gör att cigarren kan börja rulla upp sig."
+        ]
+      }
+    ]
   },
   {
     "path": "/tillbehor/tandare/",
@@ -360,7 +408,16 @@
     "intro": "En butanlåga smakar inte, till skillnad från bensintändare och svavelstickor.",
     "filter": {
       "sub": "tandare"
-    }
+    },
+    "sections": [
+      {
+        "h2": "Därför används butan till cigarrer",
+        "p": [
+          "En cigarr ska tändas med en ren låga som inte avger egen smak. Butan brinner utan lukt, medan bensintändare och svavelstickor kan ge en kemisk bismak de första blossen.",
+          "En jetflamma är vindtålig och värmer foten jämnt, vilket gör den bekväm utomhus. Med två eller tre lågor går det snabbare att tända cigarrer med stort ringmått. Fyll på med renat butan så håller munstycket längre."
+        ]
+      }
+    ]
   },
   {
     "path": "/tillbehor/askfat/",
@@ -372,7 +429,16 @@
     "intro": "Cigarrer behöver bredare hållare än cigaretter. Här finns askfat för två och fyra cigarrer.",
     "filter": {
       "sub": "askfat"
-    }
+    },
+    "sections": [
+      {
+        "h2": "Varför ett särskilt askfat för cigarrer?",
+        "p": [
+          "En cigarr är tjockare och tyngre än en cigarett, så den behöver breda och djupa hållare för att ligga still. Askan ska kunna sitta kvar på cigarren mellan blossen, och ett rymligt fat gör att du slipper knacka av den ofta.",
+          "Ett tungt askfat i glas eller keramik står stadigt och är lätt att diska. Ett lätt fat i läder är bättre att ta med ut."
+        ]
+      }
+    ]
   },
   {
     "path": "/tillbehor/fodral-och-fukt/",
@@ -387,6 +453,15 @@
     ],
     "filter": {
       "sub": "fodral-och-fukt"
-    }
+    },
+    "sections": [
+      {
+        "h2": "Fodral och fuktgivare",
+        "p": [
+          "Ett cigarrfodral skyddar cigarrerna mot tryck och uttorkning när du tar med dem hemifrån. Med cederinsats klarar de sig bra ett par dagar utanför humidorn.",
+          "Tvåvägs fuktpåsar som Boveda håller en fast luftfuktighet, till exempel 69 %. De avger fukt när luften är för torr och tar upp fukt när den är för hög, och de fungerar både i humidor och i en tät plastlåda. Byt påse när den har blivit hård."
+        ]
+      }
+    ]
   }
 ]

@@ -284,25 +284,43 @@ function Humidifier({ id }: { id: string }) {
   );
 }
 
-export function ProductArt({ product, className = '' }: { product: Product; className?: string }) {
+/** The illustration itself, as inline SVG. Used at build time to write /img/produkt/<id>.svg. */
+export function ProductSvg({ product }: { product: Product }) {
   const id = useId().replace(/:/g, '');
-  let art;
   switch (product.image) {
-    case 'cigar':
-      art = <Cigar vitola={product.vitola} wrapper={product.wrapper} band={product.band} />;
-      break;
-    case 'cutter': art = <Cutter id={id} />; break;
-    case 'lighter': art = <Lighter id={id} />; break;
-    case 'humidor': art = <Humidor id={id} />; break;
-    case 'ashtray': art = <Ashtray id={id} />; break;
-    case 'case': art = <CigarCase id={id} />; break;
-    case 'humidifier': art = <Humidifier id={id} />; break;
-    default: art = <SamplerBox id={id} />;
+    case 'cigar': return <Cigar vitola={product.vitola} wrapper={product.wrapper} band={product.band} />;
+    case 'cutter': return <Cutter id={id} />;
+    case 'lighter': return <Lighter id={id} />;
+    case 'humidor': return <Humidor id={id} />;
+    case 'ashtray': return <Ashtray id={id} />;
+    case 'case': return <CigarCase id={id} />;
+    case 'humidifier': return <Humidifier id={id} />;
+    default: return <SamplerBox id={id} />;
   }
+}
+
+export const productImage = (p: Product) => `/img/produkt/${p.id}.svg`;
+export const productAlt = (p: Product) =>
+  p.type === 'cigarr' ? `${p.name}, ${p.format?.toLowerCase() ?? 'cigarr'}${p.country ? ' från ' + p.country : ''}` : p.name;
+
+/**
+ * Product picture as a real image file, so it can be indexed by image search and referenced
+ * from structured data. `priority` is for the main image on a product page (the LCP element).
+ */
+export function ProductArt({ product, className = '', priority = false }: { product: Product; className?: string; priority?: boolean }) {
   return (
     <div className={`relative overflow-hidden bg-paper-2 ${className}`}>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,rgba(255,255,255,.55),transparent_65%)]" />
-      <div className="absolute inset-0 flex items-center justify-center px-[6%]">{art}</div>
+      <img
+        src={productImage(product)}
+        alt={productAlt(product)}
+        width={1200}
+        height={900}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        {...(priority ? { fetchpriority: 'high' } : {})}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
     </div>
   );
 }

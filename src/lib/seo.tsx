@@ -21,17 +21,33 @@ export interface HeadData {
 /** During prerendering the server passes a collector; in the browser this is null. */
 export const HeadContext = createContext<{ data?: HeadData } | null>(null);
 
+/** Keeps titles inside what Google shows (~60 chars): drops the brand suffix first if needed. */
+export function fitTitle(title: string, max = 60) {
+  const suffix = ' | ' + SITE.name;
+  if (title.length <= max || !title.endsWith(suffix)) return title;
+  return title.slice(0, -suffix.length);
+}
+
+/** Cuts text at a word boundary so descriptions never end mid-word. */
+export function clip(text: string, max = 158) {
+  const t = text.replace(/\s+/g, ' ').trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max - 1);
+  return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:\s–-]+$/, '') + '…';
+}
+
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export function headTags(d: HeadData): string {
   const url = SITE.url + d.path;
+  const title = fitTitle(d.title);
   const tags = [
-    `<title>${esc(d.title)}</title>`,
+    `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(d.description)}" data-h="description">`,
     `<link rel="canonical" href="${url}" data-h="canonical">`,
     `<meta property="og:type" content="${d.type ?? 'website'}" data-h="og:type">`,
-    `<meta property="og:title" content="${esc(d.title)}" data-h="og:title">`,
+    `<meta property="og:title" content="${esc(title)}" data-h="og:title">`,
     `<meta property="og:description" content="${esc(d.description)}" data-h="og:description">`,
     `<meta property="og:url" content="${url}" data-h="og:url">`,
     `<meta property="og:site_name" content="${SITE.name}">`,
@@ -68,10 +84,11 @@ export function Head(props: HeadData) {
 
   useEffect(() => {
     const url = SITE.url + props.path;
-    document.title = props.title;
+    const title = fitTitle(props.title);
+    document.title = title;
     setAttr('description', 'meta', 'content', props.description);
     setAttr('canonical', 'link', 'href', url);
-    setAttr('og:title', 'meta', 'content', props.title);
+    setAttr('og:title', 'meta', 'content', title);
     setAttr('og:description', 'meta', 'content', props.description);
     setAttr('og:url', 'meta', 'content', url);
     setAttr('robots', 'meta', 'content', props.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large');
@@ -118,8 +135,10 @@ export const orgLd = {
   name: SITE.name,
   url: SITE.url + '/',
   logo: SITE.url + '/icons/icon.svg',
+  image: SITE.url + '/og.png',
   email: SITE.email,
   areaServed: 'SE',
+  currenciesAccepted: 'SEK',
 };
 
 export const websiteLd = {

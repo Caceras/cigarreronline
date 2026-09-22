@@ -33,8 +33,8 @@ export default function Home() {
     <div>
       <Head
         path="/"
-        title="Cigarrer online – köp kubanska & premiumcigarrer | CigarrerOnline"
-        description="Köp cigarrer online från en svensk tobakshandel. Kubanska cigarrer som Cohiba och Montecristo, handrullade premiumcigarrer, cigariller och tillbehör. Fri frakt över 799 kr."
+        title="Cigarrer online – köp kubanska cigarrer | CigarrerOnline"
+        description="Köp cigarrer online från en svensk tobakshandel: kubanska Cohiba och Montecristo, handrullade premiumcigarrer, cigariller och tillbehör. Fri frakt över 799 kr."
         jsonLd={[websiteLd, orgLd, faqLd(faq)]}
       />
 

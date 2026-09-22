@@ -4,10 +4,10 @@ import { Minus, Plus } from 'lucide-react';
 import { getProduct, products, accessorySubs, type Product } from '../data/products';
 import { getBrand } from '../data/brands';
 import { getCollection } from '../data/collections';
-import { ProductArt } from '../components/Art';
+import { ProductArt, productImage } from '../components/Art';
 import { ProductGrid, kr } from '../components/ProductCard';
 import { Breadcrumbs, Strength } from '../components/ui';
-import { Head, SITE, breadcrumbLd, type Crumb } from '../lib/seo';
+import { Head, SITE, breadcrumbLd, clip, type Crumb } from '../lib/seo';
 import { useCart } from '../lib/cart';
 import NotFound from './NotFound';
 
@@ -59,12 +59,18 @@ export default function ProductDetail() {
   if (p.type === 'cigarr') specs.push(['Tillverkning', 'Handrullad, lång inlaga']);
   if (p.sub) specs.push(['Kategori', <Link to={`/tillbehor/${p.sub}/`} className="link-u">{accessorySubs.find((s) => s.id === p.sub)?.name}</Link>]);
 
-  const title = `${p.name}${p.type === 'cigarr' ? ' – köp online' : ''} | ${kr(p.price)} | CigarrerOnline`;
+  // Longest variant that still fits in a search result.
+  const title = [
+    ...(p.type === 'tillbehor' ? [] : [`${p.name} – köp online | ${SITE.name}`, `${p.name} – köp online`]),
+    `${p.name} | ${SITE.name}`,
+    p.name,
+  ].find((t) => t.length <= 60) ?? p.name;
   const productLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: p.name,
     sku: p.id,
+    image: SITE.url + productImage(p),
     description: p.description,
     ...(brand ? { brand: { '@type': 'Brand', name: brand.name } } : {}),
     ...(p.country ? { countryOfOrigin: p.country } : {}),
@@ -75,6 +81,24 @@ export default function ProductDetail() {
       price: p.price,
       availability: 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
+      seller: { '@type': 'Organization', name: SITE.name },
+      shippingDetails: {
+        '@type': 'OfferShippingDetails',
+        shippingRate: { '@type': 'MonetaryAmount', value: p.price >= SITE.freeShipping ? 0 : 59, currency: 'SEK' },
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'SE' },
+        deliveryTime: {
+          '@type': 'ShippingDeliveryTime',
+          handlingTime: { '@type': 'QuantitativeValue', minValue: 0, maxValue: 1, unitCode: 'DAY' },
+          transitTime: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 3, unitCode: 'DAY' },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'SE',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 14,
+        returnMethod: 'https://schema.org/ReturnByMail',
+      },
     },
   };
 
@@ -84,7 +108,7 @@ export default function ProductDetail() {
         path={`/produkt/${p.id}/`}
         type="product"
         title={title}
-        description={`${p.name}${p.country ? ` från ${p.country}` : ''}. ${p.description} ${kr(p.price)}. Fri frakt över ${SITE.freeShipping} kr.`.slice(0, 158)}
+        description={clip(`${p.name}${p.country ? ` från ${p.country}` : ''}, ${kr(p.price)}. ${p.description}`)}
         jsonLd={[breadcrumbLd(crumbs), productLd]}
       />
       <div className="container-x pt-8 sm:pt-10">
@@ -93,7 +117,7 @@ export default function ProductDetail() {
 
       <section className="container-x pt-8 sm:pt-12 grid lg:grid-cols-12 gap-10 lg:gap-16">
         <div className="lg:col-span-7">
-          <ProductArt product={p} className="aspect-[4/3] lg:aspect-[5/4]" />
+          <ProductArt product={p} priority className="aspect-[4/3] lg:aspect-[5/4]" />
         </div>
         <div className="lg:col-span-5 lg:pt-6">
           {brand && <Link to={`/marken/${brand.id}/`} className="eyebrow text-brass-dark hover:text-ink">{brand.name}</Link>}

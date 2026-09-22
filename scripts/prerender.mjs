@@ -1,13 +1,22 @@
-// Writes one static HTML file per route (so Google reads real content) plus sitemap.xml and robots.txt.
+// Writes one static HTML file per route (so Google reads real content), product images,
+// sitemap.xml (with image entries) and robots.txt.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
-const SITE = 'https://cigarreronline.se';
-const { render, allPaths } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href);
-const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+const { render, allPaths, productImages, lastmod, SITE } = await import(pathToFileURL(path.join(root, 'dist-ssr/entry-server.js')).href);
+let template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+
+// Preload the two fonts the first screen needs, so text renders in the right face at once.
+const css = fs.readdirSync(path.join(dist, 'assets')).filter((f) => f.endsWith('.css')).map((f) => fs.readFileSync(path.join(dist, 'assets', f), 'utf8')).join('');
+const preload = ['cormorant-garamond-latin-500-normal', 'inter-latin-400-normal']
+  .map((name) => css.match(new RegExp(`/assets/${name}-[\\w-]+\\.woff2`))?.[0])
+  .filter(Boolean)
+  .map((href) => `<link rel="preload" href="${href}" as="font" type="font/woff2" crossorigin>`)
+  .join('\n    ');
+template = template.replace('<!--head-->', `${preload}\n    <!--head-->`);
 
 const write = (url, file) => {
   const { html, head } = render(url);
@@ -21,15 +30,30 @@ for (const url of paths) write(url, path.join(dist, url, 'index.html'));
 write('/404/', path.join(dist, '404.html'));
 write('/varukorg/', path.join(dist, 'varukorg', 'index.html'));
 
-const today = new Date().toISOString().slice(0, 10);
+const images = productImages();
+for (const img of images) {
+  const file = path.join(dist, img.path);
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, img.svg);
+}
+const imagesByUrl = Object.fromEntries(images.map((i) => [i.url, i]));
+
 fs.writeFileSync(
   path.join(dist, 'sitemap.xml'),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    paths.map((p) => `  <url><loc>${SITE}${p}</loc><lastmod>${today}</lastmod></url>`).join('\n') +
+  `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
+    paths
+      .map((p) => {
+        const img = imagesByUrl[p];
+        return `  <url><loc>${SITE.url}${p}</loc>${lastmod[p] ? `<lastmod>${lastmod[p]}</lastmod>` : ''}` +
+          (img ? `<image:image><image:loc>${SITE.url}${img.path}</image:loc></image:image>` : '') + `</url>`;
+      })
+      .join('\n') +
     `\n</urlset>\n`,
 );
 fs.writeFileSync(
   path.join(dist, 'robots.txt'),
-  `User-agent: *\nAllow: /\nDisallow: /varukorg/\n\nSitemap: ${SITE}/sitemap.xml\nSitemap: ${SITE}/forum/sitemap.xml\n`,
+  `User-agent: *\nAllow: /\nDisallow: /varukorg/\n\nSitemap: ${SITE.url}/sitemap.xml\n` +
+    (SITE.forumEnabled ? `Sitemap: ${SITE.url}/forum/sitemap.xml\n` : ''),
 );
-console.log(`Prerendered ${paths.length + 2} pages.`);
+console.log(`Prerendered ${paths.length + 2} pages and ${images.length} product images.`);

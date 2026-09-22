@@ -99,7 +99,7 @@ export function Contact() {
   const [sent, setSent] = useState(false);
   return (
     <div>
-      <Head path="/kontakt/" title="Kontakt | CigarrerOnline" description={`Frågor om cigarrer, beställningar eller leverans? Mejla ${SITE.email} så svarar vi inom ett dygn.`} jsonLd={[breadcrumbLd(crumbs)]} />
+      <Head path="/kontakt/" title="Kontakt – frågor om cigarrer och beställningar | CigarrerOnline" description={`Frågor om cigarrer, beställningar eller leverans? Mejla ${SITE.email} så svarar vi inom ett dygn.`} jsonLd={[breadcrumbLd(crumbs)]} />
       <PageHeader crumbs={crumbs} title="Kontakt" intro="Frågor om en cigarr, en beställning eller vad du ska välja? Skriv till oss så svarar vi inom ett dygn på vardagar." />
       <section className="container-x grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4 space-y-8 text-sm">
