@@ -1,0 +1,34 @@
+name: Apply patch
+# Lets Claude ship code changes as a small diff instead of whole files: push patches/<name>.patch,
+# this job applies it, checks that the site still builds, and commits the result.
+on:
+  push:
+    branches: [main]
+    paths: ['patches/*.patch']
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Apply patches
+        run: |
+          for p in patches/*.patch; do
+            echo "Applying $p"
+            git apply --whitespace=nowarn "$p"
+            git rm -q "$p"
+          done
+      - run: npm install --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "$(git log -1 --pretty=%s)" -m "Applied from patches/ by the Apply patch workflow."
+          git push
